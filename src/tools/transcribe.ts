@@ -79,7 +79,12 @@ function parseTimestampedOutput(
 export async function transcribeAudio(
   options: TranscribeOptions
 ): Promise<TranscribeResult> {
-  const { filePath, model = "base.en", language = "en", outputFormat = "text" } = options;
+  const {
+    filePath,
+    model = "base.en",
+    language = "en",
+    outputFormat = "text",
+  } = options;
 
   // Validate file exists
   if (!fs.existsSync(filePath)) {
@@ -115,9 +120,6 @@ export async function transcribeAudio(
   }
 
   try {
-    // Build whisper-cli command
-    const outputFile = path.join(os.tmpdir(), `whisper_output_${Date.now()}`);
-
     // whisper-cli outputs to stdout with timestamps by default
     const { stdout, stderr } = await execAsync(
       `whisper-cli -m "${modelPath}" -f "${wavPath}" -l ${language} 2>&1`,

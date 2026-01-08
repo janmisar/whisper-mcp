@@ -8,7 +8,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 import { transcribeAudio, TranscribeOptions } from "./tools/transcribe.js";
-import { listModels, downloadModel, ModelInfo } from "./tools/models.js";
+import { listModels, downloadModel } from "./tools/models.js";
 
 const server = new Server(
   {
