@@ -32,14 +32,63 @@ npx whisper-mcp
 
 ### Claude Desktop
 
-Add to your `claude_desktop_config.json`:
+Add to your Claude Desktop config file:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
-    "whisper": {
+    "whisper-mcp": {
       "command": "npx",
       "args": ["-y", "whisper-mcp"]
+    }
+  }
+}
+```
+
+After editing, restart Claude Desktop.
+
+### Claude Code (CLI)
+
+For Claude Code, add to your project's `.mcp.json` file:
+
+```json
+{
+  "mcpServers": {
+    "whisper-mcp": {
+      "command": "npx",
+      "args": ["-y", "whisper-mcp"]
+    }
+  }
+}
+```
+
+Or for user-wide configuration, add to `~/.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "whisper-mcp": {
+      "command": "npx",
+      "args": ["-y", "whisper-mcp"]
+    }
+  }
+}
+```
+
+**Tip**: Use `/mcp` in Claude Code to verify the server is connected.
+
+### Local Development Setup
+
+If running from source instead of npm:
+
+```json
+{
+  "mcpServers": {
+    "whisper-mcp": {
+      "command": "node",
+      "args": ["/path/to/whisper-mcp/dist/index.js"]
     }
   }
 }
@@ -52,11 +101,11 @@ For a complete voice memo workflow, use alongside apple-voice-memo-mcp:
 ```json
 {
   "mcpServers": {
-    "voice-memos": {
+    "apple-voice-memo-mcp": {
       "command": "npx",
       "args": ["-y", "apple-voice-memo-mcp"]
     },
-    "whisper": {
+    "whisper-mcp": {
       "command": "npx",
       "args": ["-y", "whisper-mcp"]
     }

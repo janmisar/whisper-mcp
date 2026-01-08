@@ -16,6 +16,9 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "prepare": "npm run build",
     "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
   },
@@ -28,7 +31,7 @@
     "claude",
     "ai"
   ],
-  "author": "",
+  "author": "John Wulff",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -47,10 +50,12 @@
   "devDependencies": {
     "@eslint/js": "^9.0.0",
     "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.0.16",
     "eslint": "^9.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.7.0",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^4.0.16"
   },
   "files": [
     "dist",
