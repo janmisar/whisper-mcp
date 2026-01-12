@@ -182,7 +182,7 @@ Models are stored in `~/.whisper/`.
 
 ```bash
 # Clone and install
-git clone https://github.com/your-repo/whisper-mcp.git
+git clone https://github.com/jwulff/whisper-mcp.git
 cd whisper-mcp
 npm install
 
