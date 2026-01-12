@@ -1,6 +1,6 @@
 # Whisper MCP Server
 
-An MCP (Model Context Protocol) server for local audio transcription using [whisper.cpp](https://github.com/ggerganov/whisper.cpp). Transcribe audio files locally with OpenAI's Whisper models.
+A lightweight MCP (Model Context Protocol) server for local audio transcription using [whisper.cpp](https://github.com/ggerganov/whisper.cpp). There are [several Whisper MCP implementations](https://github.com/search?q=whisper+mcp&type=repositories) out there. This one is minimal and pairs with [apple-voice-memo-mcp](https://github.com/jwulff/apple-voice-memo-mcp) for a complete voice memo workflow.
 
 ## Features
 
