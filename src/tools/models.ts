@@ -19,7 +19,8 @@ const MODELS: Record<string, { size: string; file: string }> = {
   "base.en": { size: "142 MB", file: "ggml-base.en.bin" },
   "small.en": { size: "466 MB", file: "ggml-small.en.bin" },
   "medium.en": { size: "1.5 GB", file: "ggml-medium.en.bin" },
-  large: { size: "2.9 GB", file: "ggml-large-v3.bin" },
+  "large": { size: "2.9 GB", file: "ggml-large-v3.bin" },
+  "large-v3-turbo": { size: "1.6 GB", file: "ggml-large-v3-turbo.bin" },
 };
 
 const WHISPER_DIR = path.join(os.homedir(), ".whisper");

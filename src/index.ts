@@ -40,8 +40,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             model: {
               type: "string",
               description:
-                "Whisper model to use (tiny.en, base.en, small.en, medium.en, large). Default: base.en",
-              enum: ["tiny.en", "base.en", "small.en", "medium.en", "large"],
+                "Whisper model to use (tiny.en, base.en, small.en, medium.en, large, large-v3-turbo). Default: base.en",
+              enum: ["tiny.en", "base.en", "small.en", "medium.en", "large", "large-v3-turbo"],
             },
             language: {
               type: "string",
@@ -76,7 +76,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             model: {
               type: "string",
               description: "Model to download",
-              enum: ["tiny.en", "base.en", "small.en", "medium.en", "large"],
+              enum: ["tiny.en", "base.en", "small.en", "medium.en", "large", "large-v3-turbo"],
             },
           },
           required: ["model"],

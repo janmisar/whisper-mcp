@@ -121,7 +121,7 @@ Transcribe an audio file using Whisper.
 
 **Parameters:**
 - `file_path` (required): Absolute path to the audio file
-- `model` (optional): Model to use (tiny.en, base.en, small.en, medium.en, large). Default: base.en
+- `model` (optional): Model to use (tiny.en, base.en, small.en, medium.en, large, large-v3-turbo). Default: base.en
 - `language` (optional): Language code. Default: en
 - `output_format` (optional): text, timestamps, or json. Default: text
 
@@ -157,7 +157,7 @@ List available Whisper models and their download status.
 Download a Whisper model for local use.
 
 **Parameters:**
-- `model` (required): Model to download (tiny.en, base.en, small.en, medium.en, large)
+- `model` (required): Model to download (tiny.en, base.en, small.en, medium.en, large, large-v3-turbo)
 
 ## Models
 
